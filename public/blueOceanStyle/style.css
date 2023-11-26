@@ -1,0 +1,1551 @@
+
+
+body{
+  margin:0px;
+  margin-bottom: 0px;
+  /* overflow: auto; */
+}
+
+a{
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'Sweet_Romance';
+  src: url('fonts/sweet_romance/Sweet\ Romance.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Beauty';
+  src: url('fonts/beauty_2/BeautyDemo.ttf') format('truetype'), url('fonts/beauty_2/BeautyDemo.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('fonts/Metropolis/Metropolis-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Avenir-regular';
+  src: url('fonts/Metropolis/Metropolis-Regular.otf') format('opentype');
+}
+
+
+@font-face {
+  font-family: 'Avenir-Bold';
+  src: url('fonts/Metropolis/Metropolis-Bold.otf') format('opentype');
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader img {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+.parallax {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax.animate {
+  transform: translateY(-100%); 
+ 
+  transition: transform 1s; 
+}
+
+.opening {
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  width: 400px;
+  border-radius: 0px;
+  background-image: url('decoration/1.png'), url('image/camma1.jpg');
+  background-size: 100% 100vh, 100% 100vh;
+  background-repeat: no-repeat;
+  background-position: center top, center center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  /* transform: translateZ(-1px) scale(2); */
+}
+
+.opening .name{
+  font-family: 'Sweet_Romance';
+  text-align: center;
+  margin-top:300px;
+  color: white;
+  font-size: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.groom-name {
+  margin-bottom: -150px; 
+  /* margin-top: 20px; */
+}
+
+
+
+.opening h2 {
+  font-family: 'Avenir';
+  font-weight: 200;
+  /* font-size: 3px; */
+  color: white;
+}
+
+.opening .guest {
+  /* margin-bottom: 300px; */
+  margin-top: 200px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Anda dapat mengatur tinggi sesuai kebutuhan Anda */
+}
+
+.opening .guest h2 {
+  font-family: 'Avenir-Bold';
+  text-align: center;
+  font-size: 20px;
+  margin-top: -7px;
+  color: white;
+}
+
+.opening .guest h3 {
+  font-family: 'Avenir';
+  text-align: center;
+  color: white;
+  margin-top: 100px;
+  font-size: 15px;
+}
+
+.opening .button a img {
+  width: 200px;
+  display: flex;
+  margin-left: 18px;
+  margin-bottom: 0px;
+}
+
+/* .opening .button {
+  margin-bottom: 200px;
+  
+} */
+
+.opening .button #button-open img{
+  width: 140px;
+  height: auto;
+}
+
+/* CSS untuk efek parallax */
+
+/* section1 */
+
+.section1 {
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  width: 400px;
+  border-radius: 0px;
+  /* background-image: url('decoration/4.png'), url('decoration/3.png'), url('image/camma2.png') ;
+  background-size: 5% 6vh,100% 45vh, 100% 80vh;
+  background-repeat: no-repeat;
+  background-position: center bottom 270px,center bottom, center top; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9ff;
+  display: none;
+  color: white;
+  /* visibility: hidden; */
+}
+
+.section1 .quote{
+  padding: 50px;
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+/* animasi section 1 */
+
+.section1 .wedding {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 1s, transform 2s;
+}
+
+.section1 .wedding.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.section1 .quote {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 1s, transform 4s;
+}
+
+.section1 .quote.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* end animasi section 1 */
+
+.section1 .quote p1 {
+  text-align: center;
+  font-family: 'Avenir-Regular';
+  color: white;
+}
+
+.section1 .quote p2{
+  text-align: center;
+  font-family: 'Avenir-Bold';
+  color: white;
+  margin-top: 20px;
+  font-weight: 100;
+}
+
+.section1 .wedding{
+  margin-top: 150px;
+  /* margin-bottom: -100px; */
+}
+
+.section1 .wedding .name p{
+  font-family: 'Sweet_Romance';
+  text-align: center;
+  margin: 0;
+  font-size: 70px;
+
+}
+
+.section1 .wedding .name .groom-name {
+  margin-bottom: -30px;
+}
+
+.section1 .wedding h2{
+  font-family: 'Avenir';
+  text-align: center;
+  
+  margin-top: 0px;
+  font-size: 15px;
+
+}
+
+/* end section1 */
+
+/* section 2 */
+.section2 {
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  width: 400px;
+  border-radius: 0px;
+  background-image:url('decoration/BuluBiru.png') ;
+  background-size: 5% 6vh;
+  background-position: center top 390px;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9ff;
+  display: none;
+  
+}
+
+
+
+
+.section2 .bridegroom .text-dec-groom {
+  display: flex;
+  flex-direction: column;
+  /* margin-top: -200px; */
+  margin-top: -300px;
+
+  align-items: center;
+  margin-bottom: 150px;
+  /* opacity: 0; */
+  /* transition: opacity 0.5 */
+
+}
+/* animasi section 2*/
+
+.section2 .bridegroom .text-dec-groom {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 1s, transform 2s;
+}
+
+.section2 .bridegroom .text-dec-groom.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.section2 .bridegroom .text-dec-bride {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 1s, transform 4s;
+}
+
+.section2 .bridegroom .text-dec-bride.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* end animasi section 2 */
+.section2 .bridegroom .text-dec-bride {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -270px;
+  align-items: center;
+  margin-top: 150px;
+  
+
+}
+
+.section2 .bridegroom .text-dec-groom p1{
+  
+  margin-top: -45px;
+  font-family: 'Avenir-Bold';
+  color: #9bc5f5ff;
+  /* font-weight: bold; */
+}
+
+.section2 .bridegroom .text-dec-bride p1{
+  
+  margin-top: -45px;
+  font-family: 'Avenir-Bold';
+  color: #9bc5f5ff;
+  /* font-weight: bold; */
+}
+
+.section2 .bridegroom .text-dec-groom .ig{
+  text-align: center;
+  width: auto;
+  height: 20px;
+  background-color: #9bc5f5ff;
+  border-radius: 40px;
+  margin-top: 10px;
+  padding: 1px 7px;
+  /* margin-top: 15px; */
+  margin-bottom: -10px;
+}
+
+.section2 .bridegroom .text-dec-bride .ig{
+  text-align: center;
+  width: auto;
+  height: 20px;
+  background-color: #9bc5f5ff;
+  border-radius: 40px;
+  margin-top: 10px;
+  padding: 1px 7px;
+  /* margin-top: 15px; */
+  margin-bottom: -10px;
+}
+
+.section2 .bridegroom .text-dec-groom .ig a {
+  text-decoration: none;
+  font-family: 'Avenir';
+  color: white;
+}
+
+.section2 .bridegroom .text-dec-bride .ig a {
+  text-decoration: none;
+  font-family: 'Avenir';
+  color: white;
+}
+.section2 .bridegroom .text-dec-groom p{
+  font-family: 'Sweet_Romance';
+  color: #9bc5f5ff;
+  font-size: 70px;
+  /* margin-bottom: 20px; */
+  
+
+}
+
+.section2 .bridegroom .text-dec-bride p{
+  font-family: 'Sweet_Romance';
+  color: #9bc5f5ff;
+  font-size: 70px;
+  /* margin-top: 132px; */
+  /* margin-bottom: 20px; */
+
+}
+.section2 .bridegroom .text-dec-groom p2{
+  margin-top: 20px;
+  font-family: 'Avenir';
+  color: #9bc5f5ff;
+  text-align: center;
+  font-style: italic;
+  font-size: 13px;
+  
+
+}
+
+.section2 .bridegroom .text-dec-bride p2{
+  margin-top: 20px;
+  font-family: 'Avenir';
+  color: #9bc5f5ff;
+  text-align: center;
+  font-style: italic;
+  font-size: 13px;
+}
+
+
+/* end section 2 */
+
+/* section 3 */
+.section3 {
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  width: 400px;
+  border-radius: 0px;
+  /* background-image:url('decoration/4.png') ,url('decoration/7\ 1.png'), url('decoration/3.png'),url('image/camma3.png') ; */
+  background-size: 5% 6vh,100% 80vh, 100% 40vh, 100% 74.55vh;
+  background-position: center bottom 200px,center top , center bottom, center top 7px;
+  background-repeat: no-repeat;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9ff;
+  color: white;
+  display: none;
+  /* visibility: hidden; */
+  
+  
+}
+
+.section3 .countdown {
+  font-family: 'Sweet_Romance';
+  /* color: white; */
+  font-size: 50px;
+}
+
+/* animasi section 3 */
+.section3 .countdown {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 1s, transform 2s;
+}
+
+.section3 .countdown.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.section3 .countdown-row {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 1s, transform 4s;
+}
+
+.section3 .countdown-row.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.section3 .wedding-announcement {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 1s, transform 5s;
+}
+
+.section3 .wedding-announcement.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+/* end animasi section 3 */
+
+.section3 .countdown-row{
+  flex-direction: row;
+  display: flex;
+  margin-bottom: 250px;
+}
+
+.section3 .countdown-row .col-auto{
+  width: 70px;
+  height: 50px;
+  margin-right: 20px;
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  background-color: rgba(179, 210, 246, 0.7);
+
+
+  text-align: center;
+  border-radius: 50px;
+  font-family: 'Avenir';
+  /* color: white; */
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column; /* Menjadikan elemen div tata letak vertikal */
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.section3 .countdown-row .col-auto .day, .hours, .minute, .second{
+  font-size: 20px;
+}
+
+.section3 .countdown-row .col-auto .text-day, .text-hours, .text-minute, .text-second{
+  font-size: 15px;
+}
+
+.section3 .wedding-announcement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 50px;
+  margin-bottom: -120px;
+}
+
+.section3 .wedding-announcement .save-the-date {
+  font-family: 'Sweet_Romance';
+  font-size: 50px;
+}
+
+.section3 .wedding-announcement .announcement {
+  font-family: 'Avenir';
+  font-style: italic;
+}
+
+/* end section 3 */
+
+
+/* section 4 */
+.section4{
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  width: 400px;
+  border-radius: 0px;
+  background-image:url('decoration/8\ 1.png'),url('decoration/BuluBiru.png'),url('image/Rectangle\ 3.png') ;
+  background-size: 100% 20vh,5% 6vh,80% 100vh;
+  background-position: center top -125px,center top 300px,center;
+  background-repeat: no-repeat;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9ff;
+  display: none;
+  /* visibility: hidden; */
+  /* color: ; */
+}
+
+.section4 .akad-details {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 150px;
+  padding: 50px;
+  color: #9bc5f5ff;
+}
+
+/* animasi section 4 */
+
+.section4 .akad-details {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 1s, transform 4s;
+}
+
+.section4 .akad-details.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.section4 .resepsi-details {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 1s, transform 4s;
+}
+
+.section4 .resepsi-details.show {
+  opacity: 1;
+  transform: scale(1);
+}
+/* end animasi section 4 */
+
+
+
+
+.section4 .resepsi-details {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 50px;
+  color: #9bc5f5ff;
+}
+
+
+
+
+.section4 .akad-details .title {
+  font-family: 'Sweet_Romance';
+  font-size: 50px;
+}
+
+.section4 .resepsi-details .title {
+  font-family: 'Sweet_Romance';
+  font-size: 50px;
+}
+
+.section4 .akad-details .address {
+  font-family: 'Avenir';
+  margin-top: 50px;
+}
+
+.section4 .resepsi-details .address {
+  font-family: 'Avenir';
+  margin-top: 50px;
+}
+
+.section4 .akad-details .time {
+  font-style: italic;
+  font-family: 'Avenir';
+}
+
+.section4 .resepsi-details .time {
+  font-style: italic;
+  font-family: 'Avenir';
+}
+
+.section4 .akad-details .show-location {
+  font-family: 'Avenir';
+
+  display: flex;
+  /* text-align: center; */
+  align-items: center;
+  text-align: center;
+
+  justify-content: center;
+  width: 100px;
+  height: 20px;
+  padding: 1px 7px;
+  background-color: #9bc5f5ff;
+  border-radius: 40px;
+  /* background-color: #758671; */
+  /* text-decoration: none; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.section4 .resepsi-details .show-location {
+  font-family: 'Avenir';
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 20px;
+  padding: 1px 7px;
+  background-color: #9bc5f5ff;
+  border-radius: 40px;
+  /* background-color: #758671; */
+  /* text-decoration: none; */
+  margin-left: auto;
+  margin-right:auto ;
+  margin-top: 20px;
+  /* color: white; */
+
+}
+
+.section4 .resepsi-details .show-location a{
+  text-decoration: none;
+  color: white;
+
+}
+
+.section4 .akad-details .show-location a{
+  text-decoration: none;
+  color: white;
+
+}
+
+.section4 .resepsi-details .desc-location {
+  font-family: 'Avenir';
+}
+
+.section4 .resepsi-details .address-resepsi {
+  font-family: 'Avenir';
+
+}
+
+
+
+/* end section 4 */
+
+/* section 5 */
+.section5{
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  width: 400px;
+  border-radius: 0px;
+  background-image:url('decoration/SectionOurStory.png') ;
+  background-size: 100% 100vh;
+  background-repeat: no-repeat;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9ff;
+  display: none;
+  /* visibility: hidden; */
+}
+
+.section5 .wrap {
+  display: flex;
+  flex-direction: row;
+}
+
+.section5 .story-title {
+  font-family: 'Sweet_Romance';
+  font-size: 50px;
+  color: white;
+}
+
+.section5 .story-content {
+  margin-top: 30px;
+}
+
+.section5 .story-content .content {
+  font-family: 'Avenir';
+  font-style: italic;
+  color: #9bc5f5ff;
+  width: 220px;
+  height: 110px;
+  background-color:#F6F5F1;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 7px;
+}
+
+.section5 .story-content .time {
+  font-family: 'Avenir';
+  font-style: italic;
+  color: white;
+}
+
+.section5 .decoration-story{
+  margin-top: 24px;
+  margin-right: 20px;
+
+}
+
+.section5 .decoration-story .circle1, .circle2, .circle3 {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #EDEBE3;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.section5 .decoration-story .circle1 {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 1s, transform 1s;
+}
+
+.section5 .decoration-story .circle1.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.section5 .decoration-story .circle2 {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 3s, transform 3s;
+}
+
+.section5 .decoration-story .circle2.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.section5 .decoration-story .circle3 {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 5s, transform 5s;
+}
+
+.section5 .decoration-story .circle3.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.section5 .decoration-story .line1, .line2, .line3 {
+  height: 130px;
+  width: 3px;
+  background-color: #EDEBE3;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.section5 .decoration-story .line1 {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 2s, transform 2s;
+}
+
+.section5 .decoration-story .line1.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.section5 .decoration-story .line2 {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 4s, transform 4s;
+}
+
+.section5 .decoration-story .line2.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* end section 5 */
+
+/* section 6 */
+.section6{
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  width: 400px; 
+  border-radius: 0px;
+  background-size: 100% 100vh;
+  background-repeat: no-repeat;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9ff;
+  display: none;
+  margin-bottom: 150px;
+  /* visibility: hidden; */
+}
+
+.section6 .gallery-title {
+  font-family: 'Sweet_Romance';
+  color: #9bc5f5ff;
+  font-size: 50px;
+  margin-top: 50px;
+}
+
+.section6 .foto-galleries {
+  margin-top: 40px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section6 .foto-galleries .col-auto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #758671; */
+}
+
+.section6 .foto-galleries .col-auto .foto1, .foto2{
+  width: 180px;
+  height: 100px;
+  background-color: #9bc5f5ff;
+  margin-right: 6px;
+}
+
+.section6 .foto-galleries .col-auto .foto1 .foto-img, .foto2 .foto-img, .foto3 .foto-img, .foto4 .foto-img, .foto5 .foto-img, .foto6 .foto-img, .foto7 .foto-img, .foto8 .foto-img, .foto9 .foto-img, .foto10 .foto-img,.foto11 .foto-img, .foto12 .foto-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* animasi section 6 */
+.section6 .foto-galleries .col-auto .foto1, 
+.foto2, 
+.foto3, 
+.foto4, 
+.foto5,
+ .foto6, 
+ .foto7, 
+ .foto8, 
+ .foto9, 
+ .foto10,
+ .foto11, 
+ .foto12 {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 1s, transform 4s;
+}
+
+.section6 .foto-galleries .col-auto .foto1.show,
+ .section6 .foto-galleries .col-auto .foto2.show,
+ .section6 .foto-galleries .col-auto .foto3.show,
+ .section6 .foto-galleries .col-auto .foto4.show,
+ .section6 .foto-galleries .col-auto .foto5.show,
+ .section6 .foto-galleries .col-auto .foto6.show,
+ .section6 .foto-galleries .col-auto .foto7.show,
+ .section6 .foto-galleries .col-auto .foto8.show, 
+ .section6 .foto-galleries .col-auto .foto9.show,
+ .section6 .foto-galleries .col-auto .foto10.show,
+ .section6 .foto-galleries .col-auto .foto11.show,
+ .section6 .foto-galleries .col-auto .fotos12.show{
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* end animasi section 6 */
+
+
+.section6 .foto-galleries .col-auto .foto3 {
+  width: 240px;
+  height: 120px;
+  background-color: #9bc5f5ff;
+  margin-right: 6px;
+  margin-top: 6px;
+}
+
+.section6 .foto-galleries .col-auto .foto4 {
+  width: 120px;
+  height: 120px;
+  background-color: #9bc5f5ff;
+  margin-right: 6px;
+  margin-top: 6px;
+}
+
+.section6 .foto-galleries .col-auto .foto5, .foto6, .foto7 {
+  width: 118px;
+  height: 120px;
+  background-color: #9bc5f5ff;
+  margin-right: 6px;
+  margin-top: 6px;
+}
+
+.section6 .foto-galleries .col-auto .foto8, .foto9, .foto10 {
+  width: 118px;
+  height: 120px;
+  background-color: #9bc5f5ff;
+  margin-right: 6px;
+  margin-bottom: 6px;
+}
+
+.section6 .foto-galleries .col-auto .foto11, .foto12{
+  width: 180px;
+  height: 100px;
+  background-color: #9bc5f5ff;
+  margin-right: 6px;
+  margin-bottom: 6px;
+}
+/* end section 6 */
+
+
+/* section 7 */
+.section7{
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  width: 400px;
+  border-radius: 0px;
+  background-size: 100% 100vh;
+  background-repeat: no-repeat;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9ff;
+  display: none;
+  /* visibility: hidden; */
+}
+
+/* style baru section 7  */
+
+.section7 .wrap-gift1 {
+  margin-bottom: 150px;
+  width: 300px;
+  height: 500px;
+  background-color: #f6f5f1ff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  font-family: 'Avenir';
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.section7 .wrap-gift1 .account-groom {
+  margin-top: 30px;
+}
+
+.section7 .wrap-gift1 .account-bride {
+  margin-top: 30px;
+}
+
+.section7 .wrap-gift1 .account-button {
+  /* display: flex; */
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  /* Menghapus width dan height yang sudah tidak diperlukan */
+  background-color: #9bc5f5ff;
+  border-radius: 40px;
+  margin-top: 10px;
+  padding: 3px 10px;
+  font-size: 12px;
+}
+
+
+.section7 .wrap-gift1 .title {
+  margin-top: 20px;
+  font-size: 40px;
+  /* font-style: italic; */
+  color:#9bc5f5ff;
+  text-align: center;
+  font-family: 'Sweet_Romance';
+}
+
+
+/* end style baru section 7  */
+
+/* style section 7 lama */
+
+.section7 .wrap-gift {
+  padding: 50px;
+  margin-top: -300px;
+}
+
+
+/* animasi section 7 */
+.section7 .wrap-gift .gift-title {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 1s, transform 2s;
+}
+
+.section7 .wrap-gift .gift-title.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.section7 .wrap-gift .gift-content {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 1s, transform 2s;
+}
+
+.section7 .wrap-gift .gift-content.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.section7 .wrap-gift .gift-box {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 1s, transform 2s;
+}
+
+.section7 .wrap-gift .gift-box.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* end animasi secton 7 */
+
+.section7 .account-number-detail-groom{
+  font-family: 'Avenir';
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.section7 .account-number-detail-groom h1, .section7 .account-number-detail-bride h1, .section7 .account-number-detail-groom p, .section7 .account-number-detail-bride p {
+  color: #758671;
+}
+
+.section7 .account-number-detail-groom a {
+  color: white;
+}
+
+
+.section7 .account-number-detail-bride{
+  font-family: 'Avenir';
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.section7 .account-number-detail-bride a {
+  color: white;
+}
+
+.section7 .wrap-gift .gift-title {
+  font-family: 'Sweet_Romance';
+  font-size: 50px;
+  color: #758671;
+  text-align: center;
+}
+
+.section7 .wrap-gift .gift-content {
+  font-family: 'Avenir';
+  color: #758671;
+  text-align: center;
+
+}
+
+.section7 .wrap-gift .gift-box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.section7 .wrap-gift .gift-box .gift-button {
+  font-family: 'Avenir';
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: auto;
+  height: 20px;
+  background-color: #758671;
+  border-radius: 40px;
+  margin-top: 10px;
+  padding: 1px 7px;
+  
+  font-size: 10px;
+  line-height: 20px;
+  
+}
+
+.section7 .wrap-gift .gift-box .gift-button img {
+  width: auto;
+  height: 17px;
+  margin-right: 5px;
+}
+
+.section7 .wrap-gift .gift-box .gift-button a{
+  text-decoration: none;
+  color: white;
+}
+
+.account-number-detail-groom .account-button, .account-number-detail-bride .account-button {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: auto;
+  height: 30px;
+  background-color: #758671;
+  border-radius: 40px;
+  margin-top: 10px;
+  padding: 1px 7px;
+  justify-content: center;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+
+.account-number-detail-groom,
+.account-number-detail-bride {
+  display: none;
+}
+
+.account-number-detail-groom.show,
+.account-number-detail-bride.show {
+  display: block;
+}
+
+/* end style section 7 lama */
+
+
+/* end section 7 */
+
+.section8 {
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  width: 400px;
+  border-radius: 0px;
+  background-image:url('decoration/8\ 1.png'),url('image/Rectangle\ 17.png') ;
+  background-size: 100% 20vh,80% 100vh;
+  background-position: center top -125px,center,center;
+  background-repeat: no-repeat;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9ff;
+  display: none;
+  /* visibility: hidden; */
+}
+
+.section8 .wrap-reservation {
+  margin-top: 400px;
+  padding: 50px;
+}
+
+.section8 .wrap-reservation .wrap-reservation-content {
+  margin-top: -500px;
+  display: flex;
+  flex-direction: column;
+ 
+  text-align: center;
+}
+
+.section8 .wrap-reservation .wrap-reservation-form{
+  margin-top: 0px;
+}
+
+.section8 .wrap-reservation .wrap-reservation-content .title-reservation {
+  font-family: 'Sweet_Romance';
+  font-size: 50px;
+  color: #758671;
+}
+
+.section8 .wrap-reservation .wrap-reservation-content .content-reservation {
+  
+  font-family: 'Avenir';
+  color: #758671;
+}
+
+.section8 .wrap-reservation .wrap-reservation-form form .input-reservation {
+  display: flex;
+  flex-direction: column;
+  margin-top: 120px;
+}
+
+.section8 .wrap-reservation .wrap-reservation-form form .input-reservation input {
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  height: 35px;
+  margin-bottom: 20px;
+  background-color: #EDEBE3;
+  border-radius: 20px;
+  font-family: 'Avenir';
+  font-style: italic;
+}
+
+.section8 .wrap-reservation .wrap-reservation-form form .input-reservation input::placeholder {
+  padding-left: 10px;
+  /* Properti lain yang diinginkan */
+}
+
+.section8 .wrap-reservation .wrap-reservation-form form .input-reservation textarea::placeholder {
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+
+
+.section8 .wrap-reservation .wrap-reservation-form form .input-reservation textarea {
+  background-color: #EDEBE3;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  border-radius: 20px;
+  margin-bottom:20px ;
+  font-family: 'Avenir';
+  font-style: italic;
+}
+
+
+.section8 .wrap-reservation .wrap-reservation-form form .input-reservation button {
+  width: 250px;
+  height: 35px;
+  font-family: 'Avenir';
+  color: #758671;
+  font-style: italic;
+  border-radius: 20px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  /* text-align: center; */
+  align-items: center;
+  justify-content: center;
+}
+
+.section8 .wrap-reservation .chat .row-auto {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Avenir';
+  color: white;
+  margin-bottom: 20px;
+}
+
+.section8 .wrap-reservation .chat .row-auto .col-auto .content-chat {
+  font-family: 'Avenir-Regular';
+  font-size: 13px;
+}
+.section8 .wrap-reservation .chat {
+  margin-top: 20px;
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+
+.section8 .wrap-reservation .chat .row-auto .circle-name {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #657362;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  font-family: 'Avenir';
+  justify-content: center;
+  flex-shrink: 0;
+  /* overflow: hidden; */
+}
+
+.section8 .wrap-reservation .chat {
+  height: 200px;
+  width: 220px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* scroll-snap-points-y: repeat(200px); */
+  scroll-snap-type: mandatory;
+  font-size: 0;
+  
+}
+
+.section8 .wrap-reservation .chat > .row-auto {
+  width: 200px;
+  height: auto;
+  /* display: inline-block; */
+  line-height: 20px;
+  /* text-align: center; */
+  font-size: 15px;
+}
+
+
+.section9 {
+  margin-left: auto;
+  margin-right: auto;
+  height: 50vh;
+  width: 400px;
+  border-radius: 0px;
+  background-image:url('decoration/SectionPenutup.png') ;
+  background-size: 200% 80vh;
+  background-position: center top 50px;
+  background-repeat: no-repeat;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9ff;
+  display: none;
+  /* visibility: hidden; */
+  /* margin-top: 50px; */
+}
+
+.section9 .pangodi {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.section9 .closing .closing-title {
+  margin-top: 100px;
+  font-family: 'Sweet_Romance';
+  font-size: 70px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section9 .closing .closing-title .groom-name {
+  margin-bottom: -120px;
+}
+
+.section9 .closing .closing-content {
+  font-family: 'Avenir';
+  color: white;
+  margin-top: 5px;
+
+}
+
+.section9 .closing .pangodi img{
+  /* background-size: 50px; */
+  width: 100px;
+  height: auto;
+}
+
+.section9 .closing .socmed-pangodi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section9 .closing .socmed-pangodi a {
+  display: inline-block;
+  margin: 0 5px; /* Sesuaikan margin dengan kebutuhan Anda */
+}
+
+.section9 .closing .socmed-pangodi a img {
+  width: 20px;
+  height: 20px;
+}
+
+
+.footer {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f9f9f9ff;
+  width: 400px;
+  height: 80px;
+  /* display: flex; */
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Avenir';
+  font-size: 10px;
+  display: none;
+  /* visibility: hidden; */
+}
+
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+/* Media query untuk ukuran layar yang lebih kecil */
+@media (max-width: 768px) {
+  .opening {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .opening .button {
+    display: flex;
+    justify-content: center;
+  }
+
+  .section1 {
+    width: 100%;
+    /* height: 100vh; */
+  }
+
+  .section2 {
+    width: 100%;
+    /* height: 100vh; */
+
+  }
+
+  .section3 {
+    width: 100%;
+    /* height: 100vh; */
+
+  }
+  
+  .section4 {
+    width: 100%;
+    /* height: 100vh; */
+
+  }
+
+  .section5 {
+    width: 100%;
+    /* height: 100vh; */
+
+  }
+
+  .section6 {
+    width: 100%;
+    /* height: 100vh; */
+
+  }
+
+  .section7 {
+    width: 100%;
+    /* height: 100vh; */
+
+  }
+
+  .section8 {
+    width: 100%;
+    /* height: 100vh; */
+
+  }
+
+  .section9 {
+    width: 100%;
+    /* height: 100vh; */
+    
+
+  }
+
+  .footer{
+    width: 100%;
+    /* height: 100vh; */
+
+  }
+}
+
+
+
+
+
+
+
+
